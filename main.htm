@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #fullName {
+            margin-top: 16px;
+        }
+    </style>
+    <title>Flexbox Example</title>
+</head>
+<body>
+    <div class="container">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" placeholder="First name">
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" placeholder="Last name">
+
+        <button onclick="output()">Full Output</button>
+
+        <p id="fullName"></p>
+    </div>
+
+    <script>
+        const output = () => {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var fullnamehere = firstName + " " + lastName;
+            document.getElementById("fullName").innerText = fullnamehere;
+        }
+    </script>
+</body>
+</html>
