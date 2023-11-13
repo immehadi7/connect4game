@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" placeholder="First Name">
+
+    <br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" placeholder="Last Name">
+
+    <br>
+
+    <button onclick="concateName()" >Show Full Name</button>
+
+    <br>
+
+    <p id="fullNameOutput" ></p>
+
+    <script>
+        const concateName = () =>{
+            var firstName = document.getElementById("firstName").value
+            console.log(firstName)
+
+            var lastName = document.getElementById("lastName").value
+            console.log(lastName)
+
+            let fullNameIs = firstName + " " +lastName ;
+
+            document.getElementById("fullNameOutput").innerText = "Full name is :" +fullNameIs ;
+        };
+
+
+    </script>
+    
+</body>
+</html>
